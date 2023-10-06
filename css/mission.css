@@ -1,0 +1,40 @@
+
+body{
+    /* font-family: 'Slabo 27px', serif; */
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    color: #666;
+    background-color: #fff;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7em;
+}
+
+.main-body{
+    
+    padding-top: 120px; 
+    padding-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../images/background/mission1.jpg");
+    background-size: cover;
+    /* height: 405px; */
+    
+}
+
+.down-color{
+    background-color: #2d2d2d;
+    margin-top: 70px;
+   
+}
+
+.big{
+    line-height: 200%;
+}
+
+li { 
+    padding-left: 16px; 
+    line-height: 200%;
+  }
+
