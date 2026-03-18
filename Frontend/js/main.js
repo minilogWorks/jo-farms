@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE = window.JO_FARMS_API_BASE || "http://localhost:4000";
+  const API_BASE = window.JO_FARMS_API_BASE || "http://localhost:4003";
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav-links]");
 
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const response = await fetch(`${API_BASE}${endpoint}`, {
           method: "POST",
+          cache: "no-store",
           headers: {
             "Content-Type": "application/json",
           },
