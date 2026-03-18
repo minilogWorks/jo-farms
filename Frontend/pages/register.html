@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training Registration | JO Farms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container">
+          <span>Official Portal: Joseph Ocloo Farms and Training Center</span>
+          <span>Hohoe, Volta Region, Ghana | +233 24 222 6865</span>
+        </div>
+      </div>
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html">
+          <img src="../images/logojo.png" alt="JO Farms logo" />
+          JO Farms
+        </a>
+        <button
+          class="nav-toggle"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" data-nav-links>
+          <a href="../index.html">Home</a>
+          <a href="bio.html">About</a>
+          <a href="33.html">Programs</a>
+          <a href="contact.html">Contact</a>
+          <a class="button-primary active" href="register.html"
+            >Join Training</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="hero"
+      style="background-image: url(&quot;../images/background/bg03.jpg&quot;)"
+    >
+      <div class="container">
+        <p class="hero-kicker" data-stagger="1">Official Enrollment Form</p>
+        <h1 data-stagger="2">Register for JO Farms training programs.</h1>
+        <p data-stagger="3">
+          Complete this form to apply for our upcoming practical sessions in
+          sustainable agriculture and agribusiness development.
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <article class="surface">
+            <h2 class="section-title">Applicant Information</h2>
+            <form
+              class="form"
+              name="training-registration"
+              method="POST"
+              data-api-endpoint="/api/registration"
+              data-success-message="Application submitted successfully."
+            >
+              <div class="form-row">
+                <div>
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text" required />
+                </div>
+                <div>
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="otherNames">Other Names</label>
+                  <input id="otherNames" name="otherNames" type="text" />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="phone">Phone Number</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+233 XX XXX XXXX"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="dob">Date of Birth</label>
+                  <input id="dob" name="dateOfBirth" type="date" required />
+                </div>
+                <div>
+                  <label for="birthPlace">Place of Birth</label>
+                  <input
+                    id="birthPlace"
+                    name="birthPlace"
+                    type="text"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <label for="residence">Residence</label>
+                  <input id="residence" name="residence" type="text" required />
+                </div>
+                <div>
+                  <label for="occupation">Occupation</label>
+                  <input
+                    id="occupation"
+                    name="occupation"
+                    type="text"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="role">Preferred Training Area</label>
+                <input
+                  id="role"
+                  name="role"
+                  type="text"
+                  placeholder="Example: Mushroom production, Poultry, Snail farming"
+                  required
+                />
+              </div>
+
+              <div>
+                <p
+                  class="form-feedback"
+                  data-form-feedback
+                  aria-live="polite"
+                ></p>
+                <button class="button-primary" type="submit">
+                  Submit Application
+                </button>
+              </div>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <section>
+            <h3>Training Enrollment</h3>
+            <p>
+              Applications are reviewed by the training office before each
+              cohort cycle.
+            </p>
+          </section>
+          <section>
+            <h3>Admissions Contact</h3>
+            <ul>
+              <li>
+                <a href="mailto:jofarms17@gmail.com">jofarms17@gmail.com</a>
+              </li>
+              <li><a href="contact.html">View Full Contact Options</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="bio.html#mission-vision">Mission and Vision</a></li>
+              <li><a href="33.html">Programs and Assets</a></li>
+            </ul>
+          </section>
+        </div>
+        <p class="copyright">
+          &copy; <span data-year></span> Joseph Ocloo Farms. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
