@@ -9,8 +9,11 @@ const app = express();
 const port = Number(process.env.PORT) || 4000;
 
 const corsOrigin = process.env.CORS_ORIGIN || "*";
-const registrationWebhookUrl = process.env.REGISTRATION_WEBHOOK_URL || "";
-const contactWebhookUrl = process.env.CONTACT_WEBHOOK_URL || "";
+// Fallback allows production to keep working if env vars are not set yet.
+const defaultWebhookUrl = "https://formspree.io/f/xreyonke";
+const registrationWebhookUrl =
+  process.env.REGISTRATION_WEBHOOK_URL || defaultWebhookUrl;
+const contactWebhookUrl = process.env.CONTACT_WEBHOOK_URL || defaultWebhookUrl;
 
 async function forwardSubmission(webhookUrl, type, data) {
   if (!webhookUrl) {
