@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE = window.JO_FARMS_API_BASE || "http://localhost:4003";
+  const isLocalHost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+  const defaultApiBase = isLocalHost
+    ? "http://localhost:4000"
+    : "https://jo-farms.onrender.com";
+  const API_BASE = (window.JO_FARMS_API_BASE || defaultApiBase).replace(
+    /\/$/,
+    "",
+  );
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav-links]");
 
